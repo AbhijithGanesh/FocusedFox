@@ -1,0 +1,313 @@
+/* ✨ Welcome to the Enhanced Galactic Browser Stylesheet ✨ */
+
+/* 🌌 Embrace the Mystical Cosmos 🌌 */
+:root {
+    --dark-0: #0F1C2B;
+    --dark-base: #16243A;
+    --dark-1: #20405C;
+    --dark-2: #2B5278;
+    --dark-3: #387296;
+    --dark-4: #447FB3;
+    --light-0: #D7DFEA;
+    --light-base: #afc0d5;
+    --light-1: #A1B5CE;
+    --light-2: #94ABC7;
+    --light-3: #87A0C0;
+    --light-4: #7996B9;
+    --accent: #FF9F7E;
+    --yellow: #FFD44F;
+    --green: #8DEBA0;
+    --red: #FF6C8A;
+    --extension-icon-mask: grayscale(85%) invert(75%) sepia(8%) saturate(862%) hue-rotate(173deg) brightness(88%);
+}
+
+/* 🕵️‍♂️ Unleash the Enhanced Incognito Mystery 🕵️‍♂️ */
+:root.incognito {
+    --dark-0: #200E41;
+    --dark-base: #240F4F;
+    --dark-1: #341E63;
+    --dark-2: #3C226D;
+    --dark-3: #4E2D8B;
+    --dark-4: #55328A;
+    --light-0: #FF99CC;
+    --light-base: #FF66A6;
+    --light-1: #FF4D95;
+    --light-2: #FF397E;
+    --light-3: #FF2853;
+    --light-4: #FF1440;
+    --accent: #FF487E;
+    --yellow: #FFCC66;
+    --green: #66FFB2;
+    --red: #FF6688;
+    --extension-icon-mask: grayscale(85%) invert(13%) sepia(80%) saturate(3107%) hue-rotate(256deg) brightness(84%) contrast(93%);
+}
+
+/* 🚀 Set Sail into the Enhanced Unknown Space of Tabs 🚀 */
+:root {
+    --tab-border-radius: 10px;
+    /* The curvature of interstellar tabs */
+    --animation-duration: 300ms;
+    /* Hyperdrive speed for animations */
+    --spacing: 18px;
+    /* Spacing between distant galaxies (tabs) */
+    --distance-from-edge: 15px;
+    /* Navigate safely away from the edge of the universe */
+    --hover-text-spacing: 0.3;
+    /* Enhance visibility in hover mode */
+
+    --ease-in: cubic-bezier(0.32, 0, 0.67, 0);
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+    --collapsed-width: 80px;
+    /* Quantum collapse of the sidebar */
+
+    --contextual-identity-color-blue: #6F9DDC;
+    --contextual-identity-color-orange: #FFB86F;
+    --contextual-identity-color-green: #9FFFB0;
+    --contextual-identity-color-pink: #FF8CD1;
+}
+
+/* 🌈 Explore the Enhanced Multiverse of Styling 🌈 */
+#tabbar-container #tabbar {
+    margin-bottom: 20px !important;
+}
+
+/* 🌌 Embrace the Enhanced Dark Background 🌌 */
+:root,
+#background {
+    background: var(--dark-base) !important;
+}
+
+/* 🚀 Navigate the Enhanced Constellations of Tabs 🚀 */
+#all-tabs {
+    margin: 15px var(--distance-from-edge);
+}
+
+/* 🌟 Revel in the Enhanced Brilliance of Tabs 🌟 */
+tab-item:not(.collapsed) {
+    margin-top: var(--spacing);
+    border-radius: var(--tab-border-radius);
+    padding-top: 10px;
+    padding-bottom: 12px;
+}
+
+/* ✨ Experience the Enhanced Magic of Collapsed Tabs ✨ */
+tab-item.collapsed {
+    height: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 🎨 Illuminate Tabs with Dazzling Borders 🎨 */
+tab-item:not([data-level="0"]):not(.pinned) {
+    border-left: dashed 2px var(--light-3) !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: calc(var(--spacing)/2);
+}
+
+/* 🌈 Witness the Enhanced Twists and Turns of Tabs 🌈 */
+tab-item tab-favicon {
+    left: 0;
+    filter: var(--extension-icon-mask);
+    transition: transform calc(var(--animation-duration)*2) var(--ease-out);
+}
+
+/* 🌟 Highlight the Enhanced Active Tab 🌟 */
+tab-item.active {
+    background: var(--dark-3) !important;
+}
+
+/* ✨ Glow with Enhanced Hovering Tabs ✨ */
+tab-item:not(active):hover {
+    background: var(--dark-1);
+    border: 2px solid var(--light-1) !important;
+}
+
+/* 💫 Enhanced Hovering Close Boxes for Magical Closure 💫 */
+tab-item:hover tab-closebox {
+    right: 15px;
+    opacity: 1;
+    transform: rotate(360deg);
+}
+
+/* 🌟 Shine Bright with Enhanced Active Tab Labels 🌟 */
+tab-item.active .label {
+    color: var(--light-0) !important;
+}
+
+/* ✨ Enchant with Enhanced Highlighted Tabs ✨ */
+tab-item:not(.active).highlighted {
+    background: var(--dark-1) !important;
+    border: 2px solid var(--light-2) !important;
+}
+
+/* 🌈 Revel in the Enhanced Hovering Magic of Tabs 🌈 */
+tab-item:hover {
+    background: var(--dark-1);
+    border: 2px solid var(--light-1) !important;
+}
+
+/* 🌌 Embrace the Enhanced Cosmos with Fading Close Boxes 🌌 */
+tab-item:not(pinned) tab-closebox {
+    position: absolute;
+    margin-top: 2px;
+    height: 20px;
+    width: 20px;
+    right: -30px;
+    border-radius: 50%;
+    padding-top: 2px;
+    padding-left: 2px;
+    background: var(--light-4);
+    transition: all var(--animation-duration) var(--ease-out);
+}
+
+/* 🎶 Harmonize with the Enhanced Sounds of Tabs 🎶 */
+.sound-button:after {
+    background: var(--light-3) !important;
+    margin-right: 5px;
+    border: 2px solid var(--light-4) !important;
+}
+
+/* 🔢 Count the Enhanced Stellar Tabs 🔢 */
+.counter {
+    color: var(--light-4) !important;
+    background: var(--dark-2) !important;
+    border-radius: 7px;
+    margin: 2px 4px 0px 0px;
+    padding: 0 4px;
+    padding-bottom: 2px;
+    order: -1 !important;
+    border: 2px solid var(--dark-3) !important;
+}
+
+/* 🌟 Add a Dash of Enhanced Left Content Tab Elegance 🌟 */
+:root.left tab-item {
+    padding-left: 0px;
+}
+
+/* 🚀 Embark on the Enhanced Leftward Journey of Tabs 🚀 */
+:root.left tab-item tab-favicon {
+    order: 10 !important;
+    margin-right: calc(var(--collapsed-width)*0.25) !important;
+    transform: scale(120%) translateX(0px) !important;
+}
+
+/* 🌌 Dive into the Enhanced Leftward Galaxy of Tab Labels 🌌 */
+:root.left tab-item .label {
+    transform: translateX(0px);
+    margin-right: calc(var(--collapsed-width)*var(--hover-text-spacing)) !important;
+    transition: all var(--animation-duration) var(--ease-out);
+}
+
+/* 🌟 Explore the Enhanced Leftward Favicon Odyssey 🌟 */
+:root.left tab-item:not(.pinned):hover tab-favicon {
+    transform: scale(120%) translateX(-20px) !important;
+}
+
+/* 🚀 Traverse the Enhanced Leftward Trail of Unpinned Tabs 🚀 */
+:root.left tab-item:not([data-child-ids]):hover .label {
+    transform: translateX(-15px);
+}
+
+/* 🎶 Groove with the Enhanced Leftward Sounds of Tabs 🎶 */
+:root.left tab-item:hover .sound-button:after {
+    transform: translateX(-25px);
+}
+
+/* 🔍 Discover the Enhanced Leftward Twists of Nested Tabs 🔍 */
+:root.left tab-item[data-child-ids] .twisty {
+    margin-left: 5px;
+}
+
+/* ✨ Uncustomized CSS Magic ✨ */
+#tabbar-container #tabbar {
+    margin-bottom: 20px !important;
+}
+
+/* 🌌 Embrace the Enhanced Dark Background Magic 🌌 */
+:root,
+#background {
+    background: var(--dark-base) !important;
+}
+
+/* 🚀 Navigate the Enhanced Constellations of Tabs 🚀 */
+#all-tabs {
+    border: none !important;
+}
+
+/* 🌈 Illuminate the Enhanced Favicon Default with Galactic Masks 🌈 */
+.tab .favicon .favicon-default::before {
+    filter: var(--extension-icon-mask);
+    /* Change for light theme */
+}
+
+/* 🌌 Explore the Enhanced Branding Constellations 🌌 */
+.tab[data-current-favicon-uri="undefined"] .favicon .favicon-default::before {
+    background: url("chrome://branding/content/identity-icons-brand.svg") no-repeat center !important;
+    mask: none !important;
+}
+
+/* ✨ Illuminate the Enhanced New Tab Button with Radiance ✨ */
+.newtab-button::before {
+    background: var(--light-3) !important;
+    border: 2px solid var(--dark-2) !important;
+}
+
+/* 🚀 Propel into the Enhanced New Tab Button Adventure 🚀 */
+.newtab-button:hover {
+    background: var(--dark-1);
+}
+
+/* 🌌 Explore the Enhanced Pinned Tab Galaxy 🌌 */
+tab-item.pinned {
+    margin: 10px !important;
+    padding: 10px !important;
+    transition: all 0.2s var(--ease-out);
+    border: 2px solid var(--light-4) !important;
+}
+
+/* 🌌 Illuminate the Enhanced Contextual Identity Markers 🌌 */
+.contextual-identity-marker {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    border: 2px solid var(--light-1) !important;
+}
+
+/* 🚀 Embark on the Enhanced Active Contextual Identity Journey 🚀 */
+tab-item.active .contextual-identity-marker {
+    display: none !important;
+}
+
+/* 🌈 Traverse the Enhanced Contextual Identity Spectrum 🌈 */
+.contextual-identity-firefox-container-1:not(.active),
+.contextual-identity-firefox-container-2:not(.active),
+.contextual-identity-firefox-container-3:not(.active),
+.contextual-identity-firefox-container-4:not(.active) {
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    border: 2px solid var(--dark-3) !important;
+}
+
+/* 🌟 Revel in the Enhanced Active Contextual Identity Brilliance 🌟 */
+tab-item.active.contextual-identity-firefox-container-1 {
+    background: linear-gradient(to right, #254D87, #0063B2) !important;
+}
+
+/* 🌟 Immerse in the Enhanced Active Contextual Identity Radiance 🌟 */
+tab-item.active.contextual-identity-firefox-container-2 {
+    background: linear-gradient(to right, #E96E20, #FF5400) !important;
+}
+
+/* 🌟 Soar with the Enhanced Active Contextual Identity Greens 🌟 */
+tab-item.active.contextual-identity-firefox-container-3 {
+    background: linear-gradient(to right, #4BAC82, #009E74) !important;
+}
+
+/* 🌟 Glide with the Enhanced Active Contextual Identity Pinks 🌟 */
+tab-item.active.contextual-identity-firefox-container-4 {
+    background: linear-gradient(to right, #FF5EAC, #D633B4) !important;
+}
